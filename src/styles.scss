@@ -32,19 +32,15 @@ body {
 
 
 .product-image {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .product-image img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  border-radius: 0;
 }
-
-
 .new-badge {
   position: absolute;
   top: 10px;
@@ -450,12 +446,27 @@ body {
       align-items: center;
     }
     .quantity-selector {
+      width: 137px;
+      height: 32px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      justify-content: space-between;
+      gap: 10px;
+      background: #fff;
       border: 1px solid #ccc;
       border-radius: 6px;
-      padding: 2px 6px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    #quantity-display {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-align: center;
+      vertical-align: middle;
+      flex-grow: 1;
     }
     .quantity-selector button {
       background: none;
@@ -526,5 +537,7 @@ body {
       color: #888; /* Серый цвет */
       font-weight: 400;
     }
+   
     
+
     
