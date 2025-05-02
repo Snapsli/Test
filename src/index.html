@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Товар</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="product-container">
-      <div class="product-image">
-        <img src="img.png" alt="Ключ комбинированный 27мм" />
-        <span class="new-badge">⬅︎</span>
-      </div>
-      <div class="product-content">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Товар</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="product-container">
+    <div class="product-image">
+      <img src="img.png" alt="Ключ комбинированный 27мм" />
+      <span class="new-badge">⬅︎</span>
+    </div>
+
+    <div class="product-content">
       <div class="product-info">
         <h1>Ключ комбинированный 27мм (Chrome vanadium) на держателе сатинированный 1/10 (ER-31027) ЭВРИКА</h1>
 
@@ -21,80 +22,115 @@
           <img src="logo-motodetal.png" alt="Мотордеталь Кострома" />
         </div>
 
-        <p class="product-code">Артикул: FT-305174</p>
-        <p class="product-supplier-code">Код поставщика: <span class="gray-text">00000030692</span></p>
+        <p class="product-meta"><span class="meta-label">Артикул:</span> <span class="meta-value">ФТ-305.174</span></p>
+        <p class="product-meta"><span class="meta-label">Код поставщика:</span> <span class="meta-value">00000030692</span></p>
 
         <div class="price-row">
           <p class="product-price">15 341,00 ₽</p>
-        
           <div class="bonus-block">
             <img src="icon-coin.png" alt="coin" class="bonus-icon" />
             <span class="bonus-text">+ 20,79 баллов</span>
           </div>
-          
-        </div>
-        
-
-        <div class="product-availability">
-          <p>В наличии: 2 шт.</p>
-          <p>Дата поставки: 22.04.2025</p>
         </div>
 
-        <div class="product-options">
-          <label for="quantity">Количество:</label>
-          <select id="quantity">
-            <option value="1">1 шт.</option>
-            <option value="2">2 шт.</option>
-            <option value="3">3 шт.</option>
-          </select>
-          <button class="add-to-cart">В корзину</button>
-        </div>
-      </div>
-
-      <div class="tabs">
-        <button class="tab-button active" onclick="openTab(event, 'description')">Описание</button>
-        <button class="tab-button" onclick="openTab(event, 'characteristics')">Характеристики</button>
-      </div>
-
-      <div class="tab-content">
-        <div id="description" class="tab-content-item active">
-          <table class="spec-table">
-            <tr><td>Тип ТС:</td><td>грузовые автомобили, автобус, сельхозтехника</td></tr>
-            <tr><td>Применимость:</td><td>КАМАЗ, ЛИАЗ, CASE с дв. Cummins ISBe/ISDe</td></tr>
-            <tr><td>Марка ТС:</td><td>КАМАЗ, ЛИАЗ, CASE</td></tr>
-            <tr><td>Кросс-коды:</td><td>FC6206, WK950/3, 110-16-008, E187, FF5481, H243A3180, KC28, KF3041</td></tr>
-            <tr><td>Состав комплекта:</td><td>Фильтр очистки топлива: 1 шт.</td></tr>
-            <tr><td>Модель двигателя:</td><td>Cummins ISD 6.7, Cummins ISB 6.7</td></tr>
-            <tr><td>Производитель двигателя:</td><td>Cummins Inc.</td></tr>
-            <tr><td>Доп. информация:</td><td>—</td></tr>
-          </table>
+        <div class="region-card">
+          <div class="region-header">
+            <span class="city-name">Москва <span class="info-icon">🕛</span></span>
+            <div class="cart-button-wrapper">
+              <img src="Button.png" alt="В корзину" class="add-to-cart-img" onclick="addToCart('Москва')" />
+            </div>
+          </div>
+          <p class="stock-amount gray">В наличии: <strong>2 шт.</strong></p>
+          <p class="delivery-date">
+            <span class="gray-text">Дата поставки:</span>
+            <span class="green-text">22.04.2025</span>
+          </p>
         </div>
 
-        <div id="characteristics" class="tab-content-item">
-          <ul>
-            <li>Тип ТС: грузовые автомобили</li>
-            <li>Модель двигателя: Cummins ISD 6.7</li>
-            <li>Кросс-коды: FC6206, WK950/J, 110-16-008</li>
-          </ul>
+        <div class="region-card bordered">
+          <div class="region-header">
+            <span class="city-name">Ростов <span class="info-icon">🕛</span></span>
+            <div class="quantity-selector">
+              <button onclick="updateQuantity('down')">−</button>
+              <span id="quantity-display">1 шт.</span>
+              <button onclick="updateQuantity('up')">+</button>
+            </div>
+          </div>
+          <p class="stock-amount gray">В наличии: <strong>2 шт.</strong></p>
+          <p class="delivery-date">
+            <span class="gray-text">Дата поставки:</span>
+            <span class="gray-text">29.04.2025</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <script>
-      function openTab(evt, tabName) {
-        const tabcontent = document.getElementsByClassName("tab-content-item");
-        for (let i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].classList.remove("active");
-        }
+    <!-- Вкладки -->
+    <div class="tabs">
+      <button class="tab-button tab-description active" onclick="openTab(event, 'description')">Описание</button>
+      <button class="tab-button tab-characteristics" onclick="openTab(event, 'characteristics')">Характеристики</button>
+    </div>
 
-        const tabbuttons = document.getElementsByClassName("tab-button");
-        for (let i = 0; i < tabbuttons.length; i++) {
-          tabbuttons[i].classList.remove("active");
-        }
+    <div class="tab-content">
+      <div id="description" class="tab-content-item active">
+        <table class="spec-table">
+          <tr><td class="spec-title">Тип ТС:</td><td>грузовые автомобили, автобусы, сельхозтехника</td></tr>
+          <tr><td class="spec-title">Применяемость:</td><td>КАМАЗ, ЛИАЗ, CASE с дв. CUMMINS ISBe/ISDe</td></tr>
+          <tr><td class="spec-title">Марка ТС:</td><td>КАМАЗ, ЛИАЗ, CASE</td></tr>
+          <tr><td class="spec-title">КроссКоды:</td><td>FC6206<br>WK950/3<br>110-16-008<br>6127<br>FF185M<br>1457434180<br>KC28<br>KF3041</td></tr>
+          <tr><td class="spec-title">Состав комплекта:</td><td>Фильтр очистки топлива: 1 шт.</td></tr>
+          <tr><td class="spec-title">Модель двигателя:</td><td>Cummins ISD 6.7, Cummins ISB 6.7</td></tr>
+          <tr><td class="spec-title">Марка двигателя:</td><td>Cummins Inc.</td></tr>
+          <tr><td class="spec-title">Доп. информация:</td><td>—</td></tr>
+        </table>
+      </div>
 
-        document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.classList.add("active");
+      <div id="characteristics" class="tab-content-item">
+        <p>Тут пока ничего нет, это тестовое задание</p>
+      </div>
+    </div>
+
+    <!-- Иконки внизу контейнера -->
+    <div class="bottom-nav">
+      <a href="#"><img src="catalog.png" alt="Каталог" /></a>
+      <a href="#"><img src="Zakazy.png" alt="Заказы" /></a>
+      <a href="#"><img src="novosty.png" alt="Новости" /></a>
+      <a href="#"><img src="korzina.png" alt="Корзина" /></a>
+      <a href="#"><img src="profil.png" alt="Профиль" /></a>
+    </div>
+    
+
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      const tabcontent = document.getElementsByClassName("tab-content-item");
+      for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
       }
-    </script>
-  </body>
+
+      const tabbuttons = document.getElementsByClassName("tab-button");
+      for (let i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    function addToCart(city) {
+      alert(`Товар из города ${city} добавлен в корзину!`);
+    }
+
+    let quantity = 1;
+    function updateQuantity(action) {
+      if (action === 'up') {
+        quantity++;
+      } else if (action === 'down' && quantity > 1) {
+        quantity--;
+      }
+      document.getElementById('quantity-display').textContent = `${quantity} шт.`;
+    }
+  </script>
+</body>
 </html>
