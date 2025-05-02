@@ -1,7 +1,7 @@
-/* Подключаем Inter */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-/* Основной стиль */
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -21,11 +21,11 @@ body {
   max-width: 360px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0; /* Убираем отступ здесь */
+  padding: 0; 
 }
 
 .product-content {
-  padding: 20px; /* Отступы только для контента */
+  padding: 20px; 
   width: 100%;
   box-sizing: border-box;
 }
@@ -139,7 +139,7 @@ body {
   background-color: #45a049;
 }
 
-/* Вкладки */
+
 .tabs {
   margin-top: 20px;
   display: flex;
@@ -173,7 +173,7 @@ body {
   display: block;
 }
 
-/* Таблица характеристик */
+
 .spec-table {
   width: 100%;
   border-collapse: collapse;
@@ -192,7 +192,7 @@ body {
   border-bottom: none;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
   .product-container {
     flex-direction: column;
@@ -226,12 +226,12 @@ body {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0;
-  color: #01101E; /* при необходимости подправь цвет под макет */
+  color: #01101E; 
   margin-top: 10px;
 }
 .price-row {
   display: flex;
-  justify-content: space-between; /* растягивает элементы по краям */
+  justify-content: space-between; 
   align-items: center;
   margin-top: 40px;
   width: 100%;
@@ -246,7 +246,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0;
-  color: #0d0d0d; /* чёрный, как в макете */
+  color: #0d0d0d; 
   margin: 0;
 }
 
@@ -305,7 +305,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
-  color: #B3B7BC; /* если нужно задать серый цвет как в макете */
+  color: #B3B7BC; 
   margin: 0;
 }
 .stock-amount strong {
@@ -322,12 +322,12 @@ body {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
-  color: #B3B7BC; /* серый цвет по макету */
+  color: #B3B7BC; 
   margin: 0;
 }
 
 .green-text {
-  color: #50B946; /* ярко-зелёный как в макете */
+  color: #50B946; 
 }
 
 
@@ -373,12 +373,12 @@ body {
 }
 
 .meta-label {
-  color: #888; /* серый */
+  color: #888; 
   font-weight: 400;
 }
 
 .meta-value {
-  color: #000; /* чёрный */
+  color: #000; 
   font-weight: 400;
   margin-left: 4px;
 }
@@ -402,7 +402,7 @@ body {
   font-size: 14px;
   margin-left: 4px;
   position: relative;
-  top: -1px; /* точно подровнять по вертикали */
+  top: -1px; 
 }
 
 
@@ -492,18 +492,18 @@ body {
       padding: 12px 32px;
       border: none;
       border-radius: 8px;
-      background: #E6E7E9; /* светло-серый фон для неактивной */
-      color: #B3B7BC;       /* тусклый серый текст */
+      background: #E6E7E9; 
+      color: #B3B7BC;       
       font-family: 'Inter', sans-serif;
       font-size: 14px;
-      font-weight: 400;     /* обычный вес текста */
+      font-weight: 400;     
       cursor: pointer;
       transition: all 300ms ease-out;
     }
     
     .tab-button.active {
-      background: #E6ECF1;  /* фон активной вкладки */
-      color: #075095;       /* активный синий цвет */
+      background: #E6ECF1;  
+      color: #075095;       
     }
     
     
@@ -524,7 +524,7 @@ body {
       padding: 6px 0;
       border-top: 1px solid #ccc;
       box-sizing: border-box;
-      margin-top: 20px; /* чтобы не прилипал к последнему элементу */
+      margin-top: 20px; 
     }
     
     
@@ -534,7 +534,7 @@ body {
       object-fit: contain;
     }
     .spec-title {
-      color: #888; /* Серый цвет */
+      color: #888; 
       font-weight: 400;
     }
    
