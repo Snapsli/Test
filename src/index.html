@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товар</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="product-image">
+        <img src="img.png" alt="Ключ комбинированный 27мм" />
+        <span class="new-badge">⬅︎</span>
+      </div>
+
+      <div class="product-info">
+        <h1>Ключ комбинированный 27мм (Chrome vanadium) на держателе сатинированный 1/10 (ER-31027) ЭВРИКА</h1>
+
+        <div class="product-brand">
+          <img src="logo-motodetal.png" alt="Мотордеталь Кострома" />
+        </div>
+
+        <p class="product-code">Артикул: FT-305174</p>
+        <p class="product-supplier-code">Код поставщика: <span class="gray-text">00000030692</span></p>
+
+        <div class="price-row">
+          <p class="product-price">15 341,00 ₽</p>
+        
+          <div class="bonus-block">
+            <img src="icon-coin.png" alt="coin" class="bonus-icon" />
+            <span class="bonus-text">+ 20,79 баллов</span>
+          </div>
+          
+        </div>
+        
+
+        <div class="product-availability">
+          <p>В наличии: 2 шт.</p>
+          <p>Дата поставки: 22.04.2025</p>
+        </div>
+
+        <div class="product-options">
+          <label for="quantity">Количество:</label>
+          <select id="quantity">
+            <option value="1">1 шт.</option>
+            <option value="2">2 шт.</option>
+            <option value="3">3 шт.</option>
+          </select>
+          <button class="add-to-cart">В корзину</button>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'description')">Описание</button>
+        <button class="tab-button" onclick="openTab(event, 'characteristics')">Характеристики</button>
+      </div>
+
+      <div class="tab-content">
+        <div id="description" class="tab-content-item active">
+          <table class="spec-table">
+            <tr><td>Тип ТС:</td><td>грузовые автомобили, автобус, сельхозтехника</td></tr>
+            <tr><td>Применимость:</td><td>КАМАЗ, ЛИАЗ, CASE с дв. Cummins ISBe/ISDe</td></tr>
+            <tr><td>Марка ТС:</td><td>КАМАЗ, ЛИАЗ, CASE</td></tr>
+            <tr><td>Кросс-коды:</td><td>FC6206, WK950/3, 110-16-008, E187, FF5481, H243A3180, KC28, KF3041</td></tr>
+            <tr><td>Состав комплекта:</td><td>Фильтр очистки топлива: 1 шт.</td></tr>
+            <tr><td>Модель двигателя:</td><td>Cummins ISD 6.7, Cummins ISB 6.7</td></tr>
+            <tr><td>Производитель двигателя:</td><td>Cummins Inc.</td></tr>
+            <tr><td>Доп. информация:</td><td>—</td></tr>
+          </table>
+        </div>
+
+        <div id="characteristics" class="tab-content-item">
+          <ul>
+            <li>Тип ТС: грузовые автомобили</li>
+            <li>Модель двигателя: Cummins ISD 6.7</li>
+            <li>Кросс-коды: FC6206, WK950/J, 110-16-008</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openTab(evt, tabName) {
+        const tabcontent = document.getElementsByClassName("tab-content-item");
+        for (let i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.remove("active");
+        }
+
+        const tabbuttons = document.getElementsByClassName("tab-button");
+        for (let i = 0; i < tabbuttons.length; i++) {
+          tabbuttons[i].classList.remove("active");
+        }
+
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
